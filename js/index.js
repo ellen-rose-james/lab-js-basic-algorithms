@@ -50,4 +50,15 @@ console.log(words.length);
 console.log((str.match(/\bet\b/g) || []).length);
 
 //Bonus 2:
-
+let phraseToCheck = "malayalam";
+let cleanedPhrase = phraseToCheck.toLowerCase().replace(/[^a-z0-9]/g, '');
+let reverse = "";
+for(let k= cleanedPhrase.length-1; k>=0;k--){
+    reverse += cleanedPhrase[k];
+}
+if(reverse===cleanedPhrase){
+    console.log("Hey!!The given phrase is a Palindrome");
+}
+else{
+    console.log("Oops!! It's not a Palindrome");
+}
